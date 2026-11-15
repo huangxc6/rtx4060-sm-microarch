@@ -3,6 +3,9 @@
 用**微基准测量**反推这块 RTX 4060 的 SM 内部结构：几个 warp 调度器、每条流水线多宽、
 每条指令多少周期、寄存器/共享内存/L2 有多大。
 
+> **🌐 在线阅读：[huangxc6.github.io/rtx4060-sm-microarch](https://huangxc6.github.io/rtx4060-sm-microarch/)**
+> ｜ **📦 [Release v1.0](https://github.com/huangxc6/rtx4060-sm-microarch/releases/tag/v1.0)**（可直接下载报告）
+>
 > **📄 发布版报告：[`docs/final-report.html`](docs/final-report.html)**
 > （单文件自包含，12 张 SVG 内联，可直接打开 / 打印 / 转发）
 > 源文件 [`docs/FINAL-REPORT.md`](docs/FINAL-REPORT.md)，

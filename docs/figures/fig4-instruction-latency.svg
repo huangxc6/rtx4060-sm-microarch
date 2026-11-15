@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">
+<rect width="900" height="450" fill="#ffffff"/>
+<text x="36.0" y="38.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="19" fill="#111827" text-anchor="start" font-weight="600" opacity="1">图 4  指令延迟（单 warp 串行依赖链，单位：周期）</text>
+<text x="36.0" y="60.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">差值法消固定开销；每条都附 SASS 证据确认真实指令</text>
+<text x="228.0" y="107.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">FFMA / FADD / FMUL</text>
+<rect x="240.0" y="92.0" width="44.8" height="20.0" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="248.0" y="107.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">4</text>
+<text x="808.0" y="107.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">fma.rn.f32</text>
+<text x="228.0" y="143.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">IMAD（INT32 乘加）</text>
+<rect x="240.0" y="128.0" width="44.8" height="20.0" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="248.0" y="143.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">4</text>
+<text x="808.0" y="143.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">mad.lo.u32</text>
+<text x="228.0" y="179.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">IADD3（INT32 加）</text>
+<rect x="240.0" y="164.0" width="44.8" height="20.0" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="248.0" y="179.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">4</text>
+<text x="808.0" y="179.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">被 ptxas 两两融合，按 SASS 归一</text>
+<text x="228.0" y="215.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">SHF（移位）</text>
+<rect x="240.0" y="200.0" width="44.8" height="20.0" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="248.0" y="215.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">4</text>
+<text x="808.0" y="215.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">shl.b32</text>
+<text x="228.0" y="251.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">HFMA2（FP16x2）</text>
+<rect x="240.0" y="236.0" width="44.8" height="20.0" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="248.0" y="251.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">4</text>
+<text x="808.0" y="251.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">fma.rn.f16x2</text>
+<text x="228.0" y="287.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">F2I / I2F（转换）</text>
+<rect x="240.0" y="272.0" width="128.8" height="20.0" rx="4" fill="#0891b2" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="248.0" y="287.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">11.5</text>
+<text x="808.0" y="287.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">cvt 往返，每条分摊</text>
+<text x="228.0" y="323.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">MUFU（EX2/LG2/RSQ）</text>
+<rect x="240.0" y="308.0" width="190.4" height="20.0" rx="4" fill="#7c3aed" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="248.0" y="323.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">17</text>
+<text x="808.0" y="323.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">ftz 变体，避免被展开成多条</text>
+<text x="228.0" y="359.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">MMA（Tensor Core）</text>
+<rect x="240.0" y="344.0" width="454.7" height="20.0" rx="4" fill="#059669" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="248.0" y="359.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">40.6</text>
+<text x="808.0" y="359.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">HMMA.16816，D→C 依赖链</text>
+<text x="228.0" y="395.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">DADD（FP64）</text>
+<rect x="240.0" y="380.0" width="537.6" height="20.0" rx="4" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="248.0" y="395.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">48</text>
+<text x="808.0" y="395.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">add.rn.f64</text>
+<text x="876.0" y="436.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">来源：Round 1 / Round 5（results/20261115-221820-final）</text>
+</svg>

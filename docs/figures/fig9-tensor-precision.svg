@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 470" width="940" height="470" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">
+<rect width="940" height="470" fill="#ffffff"/>
+<text x="36.0" y="38.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="19" fill="#111827" text-anchor="start" font-weight="600" opacity="1">图 9  Tensor Core：吞吐严格正比于 K，但 INT8 是 FP8 的两倍</text>
+<text x="36.0" y="60.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">每 SM 每周期 FLOP（MMA 按 2·M·N·K 计）；标签下方是实测发射率</text>
+<rect x="100.0" y="100.0" width="780.0" height="230.0" rx="0" fill="#ffffff" stroke="none" stroke-width="1" opacity="1"/>
+<text x="48" y="215.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" transform="rotate(-90 48 215.0)">FLOP / cycle / SM（对数）</text>
+<rect x="132.5" y="310.7" width="65.0" height="19.3" rx="5" fill="#0891b2" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="165.0" y="300.7" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#0891b2" text-anchor="middle" font-weight="600" opacity="1">257</text>
+<text x="165.0" y="350.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#111827" text-anchor="middle" font-weight="400" opacity="1">TF32</text>
+<text x="165.0" y="365.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">m16n8k8</text>
+<text x="165.0" y="382.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">0.0626 MMA/cyc</text>
+<rect x="262.5" y="258.0" width="65.0" height="72.0" rx="5" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="295.0" y="248.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">514</text>
+<text x="295.0" y="350.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#111827" text-anchor="middle" font-weight="400" opacity="1">FP16</text>
+<text x="295.0" y="365.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">m16n8k16</text>
+<text x="295.0" y="382.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">0.1255 MMA/cyc</text>
+<rect x="392.5" y="205.4" width="65.0" height="124.6" rx="5" fill="#7c3aed" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="425.0" y="195.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#7c3aed" text-anchor="middle" font-weight="600" opacity="1">1,025</text>
+<text x="425.0" y="350.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#111827" text-anchor="middle" font-weight="400" opacity="1">FP8</text>
+<text x="425.0" y="365.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">m16n8k32</text>
+<text x="425.0" y="382.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">0.1248 MMA/cyc</text>
+<rect x="522.5" y="152.8" width="65.0" height="177.2" rx="5" fill="#059669" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="555.0" y="142.8" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#059669" text-anchor="middle" font-weight="600" opacity="1">2,047</text>
+<text x="555.0" y="350.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#111827" text-anchor="middle" font-weight="400" opacity="1">INT8</text>
+<text x="555.0" y="365.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">m16n8k32</text>
+<text x="555.0" y="382.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">0.2499 MMA/cyc</text>
+<rect x="652.5" y="100.0" width="65.0" height="230.0" rx="5" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="685.0" y="90.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#d97706" text-anchor="middle" font-weight="600" opacity="1">4,095</text>
+<text x="685.0" y="350.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#111827" text-anchor="middle" font-weight="400" opacity="1">INT4</text>
+<text x="685.0" y="365.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">m16n8k64</text>
+<text x="685.0" y="382.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">0.2499 MMA/cyc</text>
+<rect x="782.5" y="152.7" width="65.0" height="177.3" rx="5" fill="#94a3b8" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="815.0" y="142.7" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle" font-weight="600" opacity="1">2,049</text>
+<text x="815.0" y="350.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#111827" text-anchor="middle" font-weight="400" opacity="1">稀疏 FP16</text>
+<text x="815.0" y="365.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">m16n8k32</text>
+<text x="815.0" y="382.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">0.2500 MMA/cyc</text>
+<line x1="100.0" y1="311.0" x2="880.0" y2="311.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="90.0" y="315.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">256</text>
+<line x1="100.0" y1="258.3" x2="880.0" y2="258.3" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="90.0" y="262.3" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">512</text>
+<line x1="100.0" y1="205.5" x2="880.0" y2="205.5" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="90.0" y="209.5" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">1,024</text>
+<line x1="100.0" y1="152.7" x2="880.0" y2="152.7" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="90.0" y="156.7" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">2,048</text>
+<line x1="100.0" y1="100.0" x2="880.0" y2="100.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="90.0" y="104.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">4,096</text>
+<text x="106.0" y="118.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">FP16 张量 = FP32 向量（256）的 2×；FP8 = 4×；INT8 = 8×；INT4 = 16×</text>
+<text x="916.0" y="456.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">来源：Round 5 / Round 6 / Round 9。MMA 延迟 ≈40 周期</text>
+</svg>

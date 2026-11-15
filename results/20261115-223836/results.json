@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "started": "2026-11-15T22:38:36",
+    "rounds": [
+      "11"
+    ],
+    "reps": 7,
+    "finished": "2026-11-15T22:39:16"
+  },
+  "round11": {
+    "clock_ghz": 2.7466,
+    "sm_count": 24,
+    "l2_capacity": {
+      "22": {
+        "footprint_bytes": 4194304,
+        "single": 507.8,
+        "multi_min": 240.0,
+        "multi_median": 264.9,
+        "multi_max": 304.3
+      },
+      "23": {
+        "footprint_bytes": 8388608,
+        "single": 471.8,
+        "multi_min": 249.3,
+        "multi_median": 305.2,
+        "multi_max": 399.8
+      },
+      "24": {
+        "footprint_bytes": 16777216,
+        "single": 699.3,
+        "multi_min": 458.4,
+        "multi_median": 521.2,
+        "multi_max": 571.3
+      },
+      "25": {
+        "footprint_bytes": 33554432,
+        "single": 732.4,
+        "multi_min": 577.0,
+        "multi_median": 631.9,
+        "multi_max": 708.9
+      },
+      "26": {
+        "footprint_bytes": 67108864,
+        "single": 742.3,
+        "multi_min": 678.8,
+        "multi_median": 712.6,
+        "multi_max": 742.0
+      }
+    }
+  }
+}

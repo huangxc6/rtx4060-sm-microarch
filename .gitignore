@@ -1,0 +1,28 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# --- 虚拟环境（用 scripts/bootstrap.ps1 重建）---
+.venv/
+
+# --- 工具与产物（体积大、可重建）---
+build/
+!build/tools/.gitkeep
+build/wheels/
+build/*.log
+build/*.txt
+
+# --- 外部测试包：不随仓库分发（见 third_party/icache_b300_pkg/PORTING.md）---
+third_party/icache_b300_pkg/*
+!third_party/icache_b300_pkg/PORTING.md
+
+# --- 失败/崩溃的运行（保留有效快照）---
+results/*/build/
+
+# --- 编辑器 / 系统 ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

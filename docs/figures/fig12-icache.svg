@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" width="1000" height="470" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">
+<rect width="1000" height="470" fill="#ffffff"/>
+<text x="36.0" y="38.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="19" fill="#111827" text-anchor="start" font-weight="600" opacity="1">图 12  指令缓存：L1I 容量约 64-80 KiB，跨分区互不干扰</text>
+<text x="36.0" y="60.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">左：代码足迹 vs 每指令周期；右：同一/不同调度器上放两份代码</text>
+<rect x="86.0" y="96.0" width="474.0" height="264.0" rx="0" fill="#ffffff" stroke="none" stroke-width="1" opacity="1"/>
+<line x1="86.0" y1="360.0" x2="560.0" y2="360.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="76.0" y="364.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">0</text>
+<line x1="86.0" y1="294.0" x2="560.0" y2="294.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="76.0" y="298.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">1.05</text>
+<line x1="86.0" y1="228.0" x2="560.0" y2="228.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="76.0" y="232.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">2.1</text>
+<line x1="86.0" y1="162.0" x2="560.0" y2="162.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="76.0" y="166.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">3.15</text>
+<line x1="86.0" y1="96.0" x2="560.0" y2="96.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="76.0" y="100.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">4.2</text>
+<text x="86.0" y="378.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">4</text>
+<text x="219.0" y="378.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">16</text>
+<text x="351.9" y="378.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">64</text>
+<text x="484.9" y="378.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">256</text>
+<text x="323.0" y="402.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">SASS 实测代码量（KiB，对数轴）</text>
+<text x="34" y="228.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" transform="rotate(-90 34 228.0)">cycles / 指令</text>
+<rect x="351.9" y="96.0" width="21.4" height="264.0" rx="0" fill="#fef2f2" stroke="none" stroke-width="1" opacity="1"/>
+<line x1="86.0" y1="297.1" x2="560.0" y2="297.1" stroke="#6b7280" stroke-width="1.2" opacity="1" stroke-dasharray="5 4"/>
+<text x="116.0" y="285.1" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">理论下限 1.00</text>
+<polyline points="109.3,289.1 199.8,293.7 262.2,295.3 288.7,295.8 326.5,296.3 341.0,296.4 353.6,291.7 374.7,207.2 391.9,207.2 419.3,201.5 457.9,155.7 551.6,113.3" fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linejoin="round"/>
+<circle cx="109.3" cy="289.1" r="4.2" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="199.8" cy="293.7" r="4.2" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="262.2" cy="295.3" r="4.2" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="288.7" cy="295.8" r="4.2" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="326.5" cy="296.3" r="4.2" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="341.0" cy="296.4" r="4.2" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="353.6" cy="291.7" r="4.2" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="374.7" cy="207.2" r="4.2" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="391.9" cy="207.2" r="4.2" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="419.3" cy="201.5" r="4.2" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="457.9" cy="155.7" r="4.2" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="551.6" cy="113.3" r="4.2" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="334.8" y="322.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#2563eb" text-anchor="end" font-weight="600" opacity="1">64 KiB 以内：1.01-1.13</text>
+<text x="382.5" y="183.2" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#dc2626" text-anchor="start" font-weight="600" opacity="1">80 KiB：2.43（2.2x）</text>
+<line x1="351.9" y1="126.0" x2="351.9" y2="360.0" stroke="#dc2626" stroke-width="1.2" opacity="1" stroke-dasharray="4 4"/>
+<text x="345.9" y="120.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#dc2626" text-anchor="end" font-weight="600" opacity="1">容量拐点 64-80 KiB</text>
+<rect x="660.0" y="96.0" width="290.0" height="264.0" rx="0" fill="#ffffff" stroke="none" stroke-width="1" opacity="1"/>
+<line x1="660.0" y1="360.0" x2="950.0" y2="360.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="652.0" y="364.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">0</text>
+<line x1="660.0" y1="258.5" x2="950.0" y2="258.5" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="652.0" y="262.5" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">1</text>
+<line x1="660.0" y1="156.9" x2="950.0" y2="156.9" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="652.0" y="160.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">2</text>
+<rect x="674.5" y="245.5" width="18.9" height="114.5" rx="3" fill="#0891b2" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="683.9" y="239.5" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#0891b2" text-anchor="middle" font-weight="600" opacity="1">1.13</text>
+<rect x="696.2" y="254.0" width="18.9" height="106.0" rx="3" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="705.7" y="248.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#d97706" text-anchor="middle" font-weight="600" opacity="1">1.04</text>
+<text x="696.2" y="378.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">跨分区·同码</text>
+<rect x="747.0" y="245.5" width="18.9" height="114.5" rx="3" fill="#0891b2" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="756.4" y="239.5" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#0891b2" text-anchor="middle" font-weight="600" opacity="1">1.13</text>
+<rect x="768.8" y="253.9" width="18.9" height="106.1" rx="3" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="778.2" y="247.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#d97706" text-anchor="middle" font-weight="600" opacity="1">1.04</text>
+<text x="768.8" y="378.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">跨分区·异码</text>
+<rect x="819.5" y="143.6" width="18.9" height="216.4" rx="3" fill="#0891b2" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="828.9" y="137.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#0891b2" text-anchor="middle" font-weight="600" opacity="1">2.13</text>
+<rect x="841.2" y="153.5" width="18.9" height="206.5" rx="3" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="850.7" y="147.5" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#d97706" text-anchor="middle" font-weight="600" opacity="1">2.03</text>
+<text x="841.2" y="378.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">同分区·同码</text>
+<rect x="892.0" y="141.1" width="18.9" height="218.9" rx="3" fill="#0891b2" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="901.4" y="135.1" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#0891b2" text-anchor="middle" font-weight="600" opacity="1">2.16</text>
+<rect x="913.8" y="152.9" width="18.9" height="207.1" rx="3" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="923.2" y="146.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#d97706" text-anchor="middle" font-weight="600" opacity="1">2.04</text>
+<text x="913.8" y="378.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">同分区·异码</text>
+<line x1="660.0" y1="156.9" x2="950.0" y2="156.9" stroke="#dc2626" stroke-width="1.2" opacity="1" stroke-dasharray="5 4"/>
+<text x="664.0" y="149.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#111827" text-anchor="#dc2626" font-weight="400" opacity="1">2 warp 抢一调度器的下限</text>
+<rect x="660.0" y="78.0" width="10.0" height="8.0" rx="0" fill="#0891b2" stroke="none" stroke-width="1" opacity="1"/>
+<text x="674.0" y="85.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">4 KiB/份</text>
+<rect x="740.0" y="78.0" width="10.0" height="8.0" rx="0" fill="#d97706" stroke="none" stroke-width="1" opacity="1"/>
+<text x="754.0" y="85.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">16 KiB/份</text>
+<text x="976.0" y="456.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">来源：Round 12（移植 icache_b300_pkg，results/20261115-230119）</text>
+</svg>

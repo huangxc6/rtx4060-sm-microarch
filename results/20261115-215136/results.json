@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "started": "2026-11-15T21:51:36",
+    "rounds": [
+      "6"
+    ],
+    "reps": 7,
+    "finished": "2026-11-15T21:51:58"
+  },
+  "round6": {
+    "clock_ghz": 2.7466,
+    "sparse": {
+      "sweep": {
+        "1": {
+          "mma_per_cycle_per_sm": 0.0314,
+          "equiv_flop_per_cycle": 257.6,
+          "useful_flop_per_cycle": 128.8
+        },
+        "2": {
+          "mma_per_cycle_per_sm": 0.0623,
+          "equiv_flop_per_cycle": 510.1,
+          "useful_flop_per_cycle": 255.1
+        },
+        "4": {
+          "mma_per_cycle_per_sm": 0.1257,
+          "equiv_flop_per_cycle": 1030.0,
+          "useful_flop_per_cycle": 515.0
+        },
+        "8": {
+          "mma_per_cycle_per_sm": 0.125,
+          "equiv_flop_per_cycle": 1023.7,
+          "useful_flop_per_cycle": 511.9
+        }
+      },
+      "sass_instr_delta": 112,
+      "sass": "HMMA.SP.16832.F32 R12, R16, R4, RZ, R0, 0x0",
+      "peak_equiv_flop_per_cycle": 1030.0,
+      "peak_mma_per_cycle": 0.1257
+    },
+    "dispatch": {
+      "1": {
+        "start_offsets": [
+          0
+        ],
+        "durations": [
+          262
+        ],
+        "max_start_offset": 0,
+        "ipc": 0.977
+      },
+      "2": {
+        "start_offsets": [
+          0,
+          1
+        ],
+        "durations": [
+          262,
+          263
+        ],
+        "max_start_offset": 1,
+        "ipc": 1.947
+      },
+      "3": {
+        "start_offsets": [
+          0,
+          1,
+          2
+        ],
+        "durations": [
+          262,
+          263,
+          264
+        ],
+        "max_start_offset": 2,
+        "ipc": 2.909
+      },
+      "4": {
+        "start_offsets": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "durations": [
+          263,
+          264,
+          265,
+          262
+        ],
+        "max_start_offset": 3,
+        "ipc": 3.864
+      },
+      "5": {
+        "start_offsets": [
+          9,
+          2,
+          4,
+          0,
+          1
+        ],
+        "durations": [
+          515,
+          266,
+          266,
+          264,
+          313
+        ],
+        "max_start_offset": 9,
+        "ipc": 2.485
+      },
+      "6": {
+        "start_offsets": [
+          9,
+          2,
+          5,
+          0,
+          1,
+          10
+        ],
+        "durations": [
+          517,
+          522,
+          267,
+          270,
+          363,
+          280
+        ],
+        "max_start_offset": 10,
+        "ipc": 2.943
+      },
+      "8": {
+        "start_offsets": [
+          13,
+          0,
+          2,
+          4,
+          1,
+          8,
+          10,
+          12
+        ],
+        "durations": [
+          515,
+          522,
+          522,
+          522,
+          325,
+          280,
+          280,
+          280
+        ],
+        "max_start_offset": 13,
+        "ipc": 3.923
+      },
+      "12": {
+        "start_offsets": [
+          10,
+          2,
+          5,
+          0,
+          18,
+          42,
+          45,
+          20,
+          1,
+          10,
+          13,
+          12
+        ],
+        "durations": [
+          785,
+          531,
+          533,
+          423,
+          517,
+          751,
+          750,
+          774,
+          420,
+          337,
+          483,
+          525
+        ],
+        "max_start_offset": 45,
+        "ipc": 3.913
+      },
+      "16": {
+        "start_offsets": [
+          22,
+          0,
+          2,
+          4,
+          30,
+          28,
+          30,
+          807,
+          13,
+          20,
+          22,
+          45,
+          1,
+          8,
+          10,
+          12
+        ],
+        "durations": [
+          1051,
+          285,
+          481,
+          397,
+          775,
+          1031,
+          1036,
+          268,
+          532,
+          779,
+          784,
+          751,
+          382,
+          534,
+          539,
+          527
+        ],
+        "max_start_offset": 807,
+        "ipc": 3.897
+      }
+    }
+  }
+}

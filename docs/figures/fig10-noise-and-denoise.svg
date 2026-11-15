@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 460" width="940" height="460" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">
+<rect width="940" height="460" fill="#ffffff"/>
+<text x="36.0" y="38.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="19" fill="#111827" text-anchor="start" font-weight="600" opacity="1">图 10  桌面干扰的量化，以及「多 SM 取最小」的降噪效果</text>
+<text x="36.0" y="60.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">左：同一测量连做 40 次的分布；右：降噪前后对比</text>
+<rect x="96.0" y="100.0" width="374.0" height="270.0" rx="0" fill="#ffffff" stroke="none" stroke-width="1" opacity="1"/>
+<line x1="96.0" y1="370.0" x2="470.0" y2="370.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="374.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">0</text>
+<line x1="96.0" y1="316.0" x2="470.0" y2="316.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="320.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">2</text>
+<line x1="96.0" y1="262.0" x2="470.0" y2="262.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="266.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">4</text>
+<line x1="96.0" y1="208.0" x2="470.0" y2="208.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="212.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">6</text>
+<line x1="96.0" y1="154.0" x2="470.0" y2="154.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="158.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">8</text>
+<line x1="96.0" y1="100.0" x2="470.0" y2="100.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="104.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">10</text>
+<text x="283.0" y="412.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">单次测量得到的延迟（周期）</text>
+<text x="44" y="235.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" transform="rotate(-90 44 235.0)">次数</text>
+<rect x="101.2" y="289.0" width="26.9" height="81.0" rx="4" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="114.7" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">272</text>
+<rect x="138.6" y="208.0" width="26.9" height="162.0" rx="4" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="152.1" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">330</text>
+<rect x="176.0" y="154.0" width="26.9" height="216.0" rx="4" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="189.5" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">388</text>
+<rect x="213.4" y="262.0" width="26.9" height="108.0" rx="4" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="226.9" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">446</text>
+<rect x="250.8" y="289.0" width="26.9" height="81.0" rx="4" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="264.3" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">505</text>
+<rect x="288.2" y="181.0" width="26.9" height="189.0" rx="4" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="301.7" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">563</text>
+<rect x="325.6" y="316.0" width="26.9" height="54.0" rx="4" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="339.1" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">621</text>
+<rect x="363.0" y="289.0" width="26.9" height="81.0" rx="4" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="376.5" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">679</text>
+<rect x="400.4" y="343.0" width="26.9" height="27.0" rx="4" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="413.9" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">737</text>
+<rect x="437.8" y="289.0" width="26.9" height="81.0" rx="4" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="451.3" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">795</text>
+<text x="102.0" y="116.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#dc2626" text-anchor="start" font-weight="600" opacity="1">min 272 / median 506 / max 930  ⟹ 3.4×</text>
+<text x="102.0" y="136.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">（3 秒内，GPU 利用率中位数 23%）</text>
+<rect x="570.0" y="100.0" width="330.0" height="270.0" rx="0" fill="#ffffff" stroke="none" stroke-width="1" opacity="1"/>
+<line x1="570.0" y1="370.0" x2="900.0" y2="370.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="562.0" y="374.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">0</text>
+<line x1="570.0" y1="271.8" x2="900.0" y2="271.8" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="562.0" y="275.8" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">200</text>
+<line x1="570.0" y1="173.6" x2="900.0" y2="173.6" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="562.0" y="177.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">400</text>
+<rect x="578.8" y="257.7" width="16.5" height="112.3" rx="4" fill="#9ca3af" stroke="none" stroke-width="1" opacity="0.8"/>
+<rect x="596.4" y="282.4" width="16.5" height="87.6" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.9"/>
+<text x="587.0" y="251.7" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">229</text>
+<text x="604.6" y="276.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">178</text>
+<text x="597.5" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">64K</text>
+<rect x="633.8" y="236.7" width="16.5" height="133.3" rx="4" fill="#9ca3af" stroke="none" stroke-width="1" opacity="0.8"/>
+<rect x="651.4" y="266.9" width="16.5" height="103.1" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.9"/>
+<text x="642.0" y="230.7" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">272</text>
+<text x="659.6" y="260.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">210</text>
+<text x="652.5" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">256K</text>
+<rect x="688.8" y="211.1" width="16.5" height="158.9" rx="4" fill="#9ca3af" stroke="none" stroke-width="1" opacity="0.8"/>
+<rect x="706.4" y="266.6" width="16.5" height="103.4" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.9"/>
+<text x="697.0" y="205.1" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">324</text>
+<text x="714.6" y="260.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">211</text>
+<text x="707.5" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">1M</text>
+<rect x="743.8" y="132.9" width="16.5" height="237.1" rx="4" fill="#9ca3af" stroke="none" stroke-width="1" opacity="0.8"/>
+<rect x="761.4" y="255.4" width="16.5" height="114.6" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.9"/>
+<text x="752.0" y="126.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">483</text>
+<text x="769.6" y="249.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">233</text>
+<text x="762.5" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">2M</text>
+<rect x="798.8" y="120.7" width="16.5" height="249.3" rx="4" fill="#9ca3af" stroke="none" stroke-width="1" opacity="0.8"/>
+<rect x="816.4" y="252.2" width="16.5" height="117.8" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.9"/>
+<text x="807.0" y="114.7" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">508</text>
+<text x="824.6" y="246.2" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">240</text>
+<text x="817.5" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">4M</text>
+<rect x="853.8" y="138.4" width="16.5" height="231.6" rx="4" fill="#9ca3af" stroke="none" stroke-width="1" opacity="0.8"/>
+<rect x="871.4" y="247.6" width="16.5" height="122.4" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.9"/>
+<text x="862.0" y="132.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">472</text>
+<text x="879.6" y="241.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="9" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">249</text>
+<text x="872.5" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">8M</text>
+<rect x="576.0" y="108.0" width="12.0" height="10.0" rx="0" fill="#9ca3af" stroke="none" stroke-width="1" opacity="1"/>
+<text x="594.0" y="117.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">单 SM 单次</text>
+<rect x="670.0" y="108.0" width="12.0" height="10.0" rx="0" fill="#2563eb" stroke="none" stroke-width="1" opacity="1"/>
+<text x="688.0" y="117.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#2563eb" text-anchor="start" font-weight="400" opacity="1">多 SM 取最小</text>
+<text x="570.0" y="410.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#dc2626" text-anchor="start" font-weight="600" opacity="1">2M/4M 改善 2.1×/1.7× ⟹ 原来的「台阶」是干扰伪像</text>
+<text x="916.0" y="446.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">来源：Round 10（results/20261115-221820-final）</text>
+</svg>

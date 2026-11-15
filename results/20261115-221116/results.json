@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "started": "2026-11-15T22:11:16",
+    "rounds": [
+      "9"
+    ],
+    "reps": 7,
+    "finished": "2026-11-15T22:11:41"
+  },
+  "round9": {
+    "clock_ghz": 2.7466,
+    "tensor": {
+      "int8": {
+        "note": "INT8 s8 (m16n8k32)",
+        "flop_per_mma": 8192,
+        "sass": "IMMA.16832.S8.S8.SAT R12, R4.reuse.ROW, R8.reuse.COL, RZ",
+        "d_instr": 112,
+        "sweep": {
+          "1": {
+            "mma_per_cycle": 0.0606,
+            "flop_per_cycle": 496.8
+          },
+          "2": {
+            "mma_per_cycle": 0.1212,
+            "flop_per_cycle": 993.0
+          },
+          "4": {
+            "mma_per_cycle": 0.2426,
+            "flop_per_cycle": 1987.0
+          },
+          "8": {
+            "mma_per_cycle": 0.2501,
+            "flop_per_cycle": 2048.6
+          }
+        },
+        "peak_flop_per_cycle": 2048.6,
+        "peak_mma_per_cycle": 0.2501
+      },
+      "int4": {
+        "note": "INT4 s4 (m16n8k64)",
+        "flop_per_mma": 16384,
+        "sass": "IMMA.16864.S4.S4.SAT R12, R4.reuse.ROW, R8.reuse.COL, RZ",
+        "d_instr": 112,
+        "sweep": {
+          "1": {
+            "mma_per_cycle": 0.0607,
+            "flop_per_cycle": 994.0
+          },
+          "2": {
+            "mma_per_cycle": 0.1211,
+            "flop_per_cycle": 1983.8
+          },
+          "4": {
+            "mma_per_cycle": 0.2427,
+            "flop_per_cycle": 3976.2
+          },
+          "8": {
+            "mma_per_cycle": 0.25,
+            "flop_per_cycle": 4096.0
+          }
+        },
+        "peak_flop_per_cycle": 4096.0,
+        "peak_mma_per_cycle": 0.25
+      }
+    },
+    "tlb": {
+      "4": {
+        "pages": 4,
+        "bytes_touched": 512,
+        "latency_cycles": 37.0
+      },
+      "8": {
+        "pages": 8,
+        "bytes_touched": 1024,
+        "latency_cycles": 37.0
+      },
+      "16": {
+        "pages": 16,
+        "bytes_touched": 2048,
+        "latency_cycles": 37.0
+      },
+      "32": {
+        "pages": 32,
+        "bytes_touched": 4096,
+        "latency_cycles": 37.0
+      },
+      "64": {
+        "pages": 64,
+        "bytes_touched": 8192,
+        "latency_cycles": 37.0
+      },
+      "128": {
+        "pages": 128,
+        "bytes_touched": 16384,
+        "latency_cycles": 37.0
+      },
+      "256": {
+        "pages": 256,
+        "bytes_touched": 32768,
+        "latency_cycles": 37.01
+      }
+    }
+  }
+}

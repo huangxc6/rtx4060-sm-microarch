@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" width="900" height="430" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">
+<rect width="900" height="430" fill="#ffffff"/>
+<text x="36.0" y="38.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="19" fill="#111827" text-anchor="start" font-weight="600" opacity="1">图 3  各流水线的并行通道数（每 SM、每周期）</text>
+<text x="36.0" y="60.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">warp 数扫描的饱和值；括号里是每调度器的通道数</text>
+<text x="188.0" y="108.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">FP32  FMA</text>
+<rect x="200.0" y="92.0" width="630.0" height="22.0" rx="4" fill="#f3f4f6" stroke="none" stroke-width="1" opacity="1"/>
+<rect x="200.0" y="92.0" width="628.0" height="22.0" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="208.0" y="108.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">128</text>
+<text x="838.0" y="108.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">32 / 调度器</text>
+<text x="188.0" y="146.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">INT 加  IADD3</text>
+<rect x="200.0" y="130.0" width="630.0" height="22.0" rx="4" fill="#f3f4f6" stroke="none" stroke-width="1" opacity="1"/>
+<rect x="200.0" y="130.0" width="630.0" height="22.0" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="208.0" y="146.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">128</text>
+<text x="838.0" y="146.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">32 / 调度器</text>
+<text x="188.0" y="184.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">INT 乘  IMAD</text>
+<rect x="200.0" y="168.0" width="630.0" height="22.0" rx="4" fill="#f3f4f6" stroke="none" stroke-width="1" opacity="1"/>
+<rect x="200.0" y="168.0" width="333.7" height="22.0" rx="4" fill="#0891b2" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="208.0" y="184.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">68</text>
+<text x="838.0" y="184.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">16 / 调度器</text>
+<text x="188.0" y="222.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">FP16x2  HFMA2</text>
+<rect x="200.0" y="206.0" width="630.0" height="22.0" rx="4" fill="#f3f4f6" stroke="none" stroke-width="1" opacity="1"/>
+<rect x="200.0" y="206.0" width="334.2" height="22.0" rx="4" fill="#0891b2" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="208.0" y="222.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">68</text>
+<text x="838.0" y="222.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">16 / 调度器（每条 2 个 FP16）</text>
+<text x="188.0" y="260.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">移位  SHF</text>
+<rect x="200.0" y="244.0" width="630.0" height="22.0" rx="4" fill="#f3f4f6" stroke="none" stroke-width="1" opacity="1"/>
+<rect x="200.0" y="244.0" width="315.0" height="22.0" rx="4" fill="#0891b2" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="208.0" y="260.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">64</text>
+<text x="838.0" y="260.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">16 / 调度器</text>
+<text x="188.0" y="298.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">逻辑  LOP3</text>
+<rect x="200.0" y="282.0" width="630.0" height="22.0" rx="4" fill="#f3f4f6" stroke="none" stroke-width="1" opacity="1"/>
+<rect x="200.0" y="282.0" width="288.9" height="22.0" rx="4" fill="#0891b2" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="208.0" y="298.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">59</text>
+<text x="838.0" y="298.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">≈16（受可折叠性影响）</text>
+<text x="188.0" y="336.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">SFU  MUFU</text>
+<rect x="200.0" y="320.0" width="630.0" height="22.0" rx="4" fill="#f3f4f6" stroke="none" stroke-width="1" opacity="1"/>
+<rect x="200.0" y="320.0" width="78.8" height="22.0" rx="4" fill="#7c3aed" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="208.0" y="336.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">16</text>
+<text x="838.0" y="336.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">4 / 调度器</text>
+<text x="188.0" y="374.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#111827" text-anchor="end" font-weight="400" opacity="1">FP64  DFMA</text>
+<rect x="200.0" y="358.0" width="630.0" height="22.0" rx="4" fill="#f3f4f6" stroke="none" stroke-width="1" opacity="1"/>
+<rect x="200.0" y="358.0" width="9.8" height="22.0" rx="4" fill="#d97706" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="208.0" y="374.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#ffffff" text-anchor="start" font-weight="600" opacity="1">2</text>
+<text x="838.0" y="374.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">0.5 / 调度器（全 SM 2 个）</text>
+<line x1="830.0" y1="86.0" x2="830.0" y2="400.0" stroke="#dc2626" stroke-width="1.2" opacity="1" stroke-dasharray="5 4"/>
+<text x="836.0" y="82.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#dc2626" text-anchor="start" font-weight="400" opacity="1">128</text>
+<text x="876.0" y="416.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">来源：Round 2。注意 FP32 的 128 需要操作数可复用，见 图 5</text>
+</svg>

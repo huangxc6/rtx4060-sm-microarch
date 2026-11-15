@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "started": "2026-11-15T22:17:45",
+    "rounds": [
+      "10"
+    ],
+    "reps": 7,
+    "finished": "2026-11-15T22:18:10"
+  },
+  "round10": {
+    "clock_ghz": 2.7466,
+    "sm_count": 24,
+    "noise": {
+      "n": 40,
+      "min": 272.1,
+      "p25": 401.0,
+      "median": 472.6,
+      "p75": 612.0,
+      "max": 853.3,
+      "spread_max_over_min": 3.14,
+      "gpu_util_samples": [
+        100,
+        100,
+        100,
+        100,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        29,
+        29,
+        29,
+        29,
+        29
+      ],
+      "gpu_util_median": 23,
+      "elapsed_s": 2.6
+    },
+    "multi_sm": {
+      "16": {
+        "footprint_bytes": 65536,
+        "single_cycles": 216.2,
+        "multi_min": 178.4,
+        "multi_median": 197.3,
+        "multi_max": 215.7,
+        "n_cta": 24
+      },
+      "18": {
+        "footprint_bytes": 262144,
+        "single_cycles": 256.1,
+        "multi_min": 209.9,
+        "multi_median": 232.7,
+        "multi_max": 255.2,
+        "n_cta": 24
+      },
+      "20": {
+        "footprint_bytes": 1048576,
+        "single_cycles": 255.5,
+        "multi_min": 209.5,
+        "multi_median": 232.5,
+        "multi_max": 255.0,
+        "n_cta": 24
+      },
+      "21": {
+        "footprint_bytes": 2097152,
+        "single_cycles": 415.2,
+        "multi_min": 233.1,
+        "multi_median": 258.9,
+        "multi_max": 281.8,
+        "n_cta": 24
+      },
+      "22": {
+        "footprint_bytes": 4194304,
+        "single_cycles": 435.9,
+        "multi_min": 241.3,
+        "multi_median": 262.4,
+        "multi_max": 299.2,
+        "n_cta": 24
+      },
+      "23": {
+        "footprint_bytes": 8388608,
+        "single_cycles": 479.0,
+        "multi_min": 320.5,
+        "multi_median": 365.6,
+        "multi_max": 431.8,
+        "n_cta": 24
+      }
+    }
+  }
+}

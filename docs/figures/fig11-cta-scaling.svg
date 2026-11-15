@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">
+<rect width="900" height="420" fill="#ffffff"/>
+<text x="36.0" y="38.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="19" fill="#111827" text-anchor="start" font-weight="600" opacity="1">图 11  24 个 SM：固定每 CTA 工作量的扩展性台阶</text>
+<text x="36.0" y="60.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">grid 1→24 时间恒定，grid=25 立刻翻倍 ⟹ 这是直接测出 SM 数的方法</text>
+<rect x="96.0" y="96.0" width="764.0" height="254.0" rx="0" fill="#ffffff" stroke="none" stroke-width="1" opacity="1"/>
+<line x1="96.0" y1="350.0" x2="860.0" y2="350.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="354.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">0</text>
+<line x1="96.0" y1="299.2" x2="860.0" y2="299.2" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="303.2" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">0.3</text>
+<line x1="96.0" y1="248.4" x2="860.0" y2="248.4" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="252.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">0.6</text>
+<line x1="96.0" y1="197.6" x2="860.0" y2="197.6" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="201.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">0.9</text>
+<line x1="96.0" y1="146.8" x2="860.0" y2="146.8" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="150.8" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">1.2</text>
+<line x1="96.0" y1="96.0" x2="860.0" y2="96.0" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="100.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">1.5</text>
+<text x="143.8" y="368.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">1</text>
+<text x="239.2" y="368.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">2</text>
+<text x="334.8" y="368.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">4</text>
+<text x="430.2" y="368.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">8</text>
+<text x="525.8" y="368.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">12</text>
+<text x="621.2" y="368.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">24</text>
+<text x="716.8" y="368.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">25</text>
+<text x="812.2" y="368.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">48</text>
+<text x="478.0" y="392.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">grid（CTA 数）</text>
+<text x="44" y="223.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" transform="rotate(-90 44 223.0)">内核时间（ms）</text>
+<rect x="117.0" y="207.9" width="53.5" height="142.1" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="143.8" y="199.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">0.84</text>
+<rect x="212.5" y="239.8" width="53.5" height="110.2" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="239.2" y="231.8" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">0.65</text>
+<rect x="308.0" y="239.9" width="53.5" height="110.1" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="334.8" y="231.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">0.65</text>
+<rect x="403.5" y="237.9" width="53.5" height="112.1" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="430.2" y="229.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">0.66</text>
+<rect x="499.0" y="240.4" width="53.5" height="109.6" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="525.8" y="232.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">0.65</text>
+<rect x="594.5" y="240.1" width="53.5" height="109.9" rx="4" fill="#2563eb" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="621.2" y="232.1" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#2563eb" text-anchor="middle" font-weight="600" opacity="1">0.65</text>
+<rect x="690.0" y="132.4" width="53.5" height="217.6" rx="4" fill="#dc2626" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="716.8" y="124.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#dc2626" text-anchor="middle" font-weight="600" opacity="1">1.28</text>
+<rect x="785.5" y="133.4" width="53.5" height="216.6" rx="4" fill="#dc2626" stroke="none" stroke-width="1" opacity="0.85"/>
+<text x="812.2" y="125.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#dc2626" text-anchor="middle" font-weight="600" opacity="1">1.28</text>
+<line x1="96.0" y1="239.9" x2="860.0" y2="239.9" stroke="#059669" stroke-width="1.2" opacity="1" stroke-dasharray="5 4"/>
+<text x="102.0" y="229.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#059669" text-anchor="start" font-weight="400" opacity="1">1 波：24 个 CTA 全部并行（0.65 ms）</text>
+<text x="678.5" y="116.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#dc2626" text-anchor="start" font-weight="600" opacity="1">第 25 个 CTA 起需要第二波 ⟹ 只有 24 个 SM</text>
+<text x="876.0" y="406.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">来源：Round 7。全卡 FP32 实测 15.1 TFLOPS（理想 16.86 的 89%）</text>
+</svg>

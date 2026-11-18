@@ -26,3 +26,6 @@ results/*/build/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# 提交消息临时文件
+scripts/_*.txt

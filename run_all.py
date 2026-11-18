@@ -34,6 +34,7 @@ ROUNDS = {
     "12": ("probes.round12_icache", "L1I 容量 / L0I 分区争用（移植 b300_pkg）"),
     "13": ("probes.round13_icache_struct", "指令缓存分级容量 / 预取 / 替换"),
     "14": ("probes.round14_capacity_fine", "L1I 容量细扫（57 点，二分派发）"),
+    "15": ("probes.round15_assoc_l0", "相联度 / set 跨度 / 干扰量化"),
 }
 
 

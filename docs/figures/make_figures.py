@@ -636,8 +636,59 @@ def fig12():
     save("fig12-icache.svg", s)
 
 
+# ===========================================================================
+# Fig 13：L1I 容量细扫（57 点，每点 1424 B）
+# ===========================================================================
+def fig13():
+    import json
+    import math
+    data = json.loads((OUT / "data" / "cap_curve.json").read_text(encoding="utf-8"))
+    pts = [(c["bytes"], c["per_step"]) for c in data["curve"]]
+    base = min(v for _, v in pts)
+
+    W, H = 1000, 470
+    s = Svg(W, H)
+    header(s, "图 13  指令缓存容量细扫：每步代价随足迹的拐点",
+           "统一尺寸的填充块（1424 B）× 57 个足迹点；纵轴是循环稳态的每步周期")
+    box = (96, 98, 930, 372)
+
+    xlo, xhi = 0, 88000
+
+    def X(v):
+        return box[0] + (box[2] - box[0]) * (v - xlo) / (xhi - xlo)
+
+    def Y(v):
+        lo, hi = base - 12, 690
+        return box[3] - (box[3] - box[1]) * (v - lo) / (hi - lo)
+
+    axes(s, box, "足迹（字节）", "每步周期", ymax=1, ymin=0, yticks=0,
+         xpos=[(X(v), f"{v // 1024}K") for v in (0, 16384, 32768, 49152, 65536, 81920)])
+    for v in (600, 620, 640, 660, 680):
+        y = Y(v)
+        s.line(box[0], y, box[2], y, GRID, 1)
+        s.text(box[0] - 10, y + 4, str(v), 10.5, "end", MUTED)
+
+    # 平区与平台的参考线
+    s.line(box[0], Y(base), box[2], Y(base), BLUE, 1.2, "5 4")
+    s.text(box[0] + 6, Y(base) - 8, f"平区基线 {base:.0f} 周期", 10.5, fill=BLUE)
+    plateau = max(v for _, v in pts)
+    s.line(X(76000), Y(plateau), box[2], Y(plateau), RED, 1.2, "5 4")
+    s.text(box[2] - 4, Y(plateau) - 8, f"平台 {plateau:.0f}（+{100 * (plateau / base - 1):.0f}%）",
+           10.5, "end", RED)
+
+    # 拐点区域
+    s.rect(X(58400), box[1], X(64000) - X(58400), box[3] - box[1], "#fef2f2", "none")
+    s.text(X(61200), box[3] + 40, "拐点 58.4–64 KiB", 11.5, "middle", RED, "600")
+
+    s.poly([(X(a), Y(b)) for a, b in pts], BLUE, 2.6)
+    for a, b in pts[::2]:
+        s.circle(X(a), Y(b), 3.0, BG, BLUE, 1.6)
+    footer(s, "来源：Round 13b（results/20261118-*，数据 docs/figures/data/cap_curve.json）")
+    save("fig13-icache-capacity.svg", s)
+
+
 if __name__ == "__main__":
     print("生成 SVG：")
-    for fn in (fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12):
+    for fn in (fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12, fig13):
         fn()
     print(f"完成，输出目录 {OUT}")

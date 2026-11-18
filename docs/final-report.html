@@ -45,7 +45,7 @@ figcaption{font-size:12.5px;color:var(--muted);margin-top:6px;padding:0 6px}
 <div class="table-wrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>目标设备</td><td>NVIDIA GeForce RTX 4060（<strong>Ada Lovelace</strong>，芯片 <strong>AD107</strong>，<code>sm_89</code>，8 GiB，PCI 01:00.0）</td></tr><tr><td>宿主</td><td>Windows 11 26200 / i5-13490F（无核显）/ 32 GB</td></tr><tr><td>驱动</td><td>610.88（KMD 610.88，CUDA UMD 13.3），WDDM，非管理员</td></tr><tr><td>实测主频</td><td><strong>2.74 GHz</strong>（标称 2.46 GHz，实测会跑在标称之上）</td></tr><tr><td>数据快照</td><td><code>results/20261115-221820-final/</code>（Round 0–10）、<code>results/20261115-223836/</code>（Round 11）</td></tr><tr><td>工程位置</td><td><code>E:\2026\4060-sm-microarch</code></td></tr></tbody></table></div>
 <h2>摘要</h2>
 <p>这块卡的 SM 是 <strong>4 个调度器</strong>，每调度器每周期只发 <strong>1 条</strong> warp 指令、管 <strong>32 个 FP32 lane</strong>，因此 FP32 峰值为 128 ops/cycle/SM。INT32 加能跑满 128 宽，而乘/移位/逻辑只有 64 宽；Tensor Core 的吞吐严格正比于 K，但同形状下 INT8 是 FP8 的两倍。</p>
-<div class="table-wrap"><table><thead><tr><th>维度</th><th>实测结论</th></tr></thead><tbody><tr><td><strong>调度</strong></td><td>4 个调度器；总发射上限 <strong>4.00 条 warp 指令/周期</strong>；<strong>无双发射</strong></td></tr><tr><td><strong>FP32</strong></td><td><strong>128</strong> ops/cycle/SM（前提：操作数可复用；三源全不同时只有 <strong>78</strong>）</td></tr><tr><td><strong>INT</strong></td><td>加 <strong>128</strong>、乘 <strong>64</strong>、移位 <strong>64</strong>、逻辑 ≈<strong>59</strong></td></tr><tr><td><strong>FP16（非张量）</strong></td><td><strong>64</strong> 条 HFMA2 = <strong>128</strong> FP16 FLOP/cycle/SM（与 FP32 相同）</td></tr><tr><td><strong>FP64</strong></td><td><strong>2</strong> ops/cycle/SM（正好 FP32 的 <strong>1/64</strong>）</td></tr><tr><td><strong>SFU</strong></td><td><strong>16</strong> ops/cycle/SM（每调度器 4）</td></tr><tr><td><strong>延迟</strong></td><td>算术指令 <strong>4</strong> 周期；MUFU <strong>17</strong>；MMA <strong>≈40</strong>；FP64 <strong>48</strong></td></tr><tr><td><strong>存储</strong></td><td>L1 <strong>37</strong> 周期、L2 <strong>240–249</strong>、DRAM <strong>679–750</strong>；可用 L2 仅 <strong>8–12 MiB</strong></td></tr><tr><td><strong>带宽</strong></td><td>读 <strong>250 GB/s</strong>、写 <strong>245 GB/s</strong>（标称 272 的 92%/90%）；<strong>sector = 32 B</strong></td></tr><tr><td><strong>共享内存</strong></td><td><strong>32 bank × 4 B</strong>，LDS 延迟 <strong>24</strong> 周期，LDS 发射率 <strong>每 2 周期 1 条</strong></td></tr><tr><td><strong>指令缓存（L1I）</strong></td><td>容量 <strong>54–64 KiB</strong>（两种独立方法一致）；64 KiB 以内 <strong>1.01–1.13 cycles/指令</strong>，越界后 2.4→3.9</td></tr><tr><td><strong>取指预取</strong></td><td>只预取<strong>相邻 1 行</strong>（+1 行 181 周期 ≈ 命中，+3 行 272 ≈ 失效）</td></tr><tr><td><strong>Tensor</strong></td><td>FP16 <strong>514</strong> / TF32 <strong>257</strong> / FP8 <strong>1025</strong> / INT8 <strong>2047</strong> / INT4 <strong>4095</strong> FLOP/cycle/SM</td></tr><tr><td><strong>全卡</strong></td><td><strong>24 个 SM</strong>（直接测出）；FP32 实测 <strong>15.1 TFLOPS</strong>（理想 16.86 的 89%）</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>维度</th><th>实测结论</th></tr></thead><tbody><tr><td><strong>调度</strong></td><td>4 个调度器；总发射上限 <strong>4.00 条 warp 指令/周期</strong>；<strong>无双发射</strong></td></tr><tr><td><strong>FP32</strong></td><td><strong>128</strong> ops/cycle/SM（前提：操作数可复用；三源全不同时只有 <strong>78</strong>）</td></tr><tr><td><strong>INT</strong></td><td>加 <strong>128</strong>、乘 <strong>64</strong>、移位 <strong>64</strong>、逻辑 ≈<strong>59</strong></td></tr><tr><td><strong>FP16（非张量）</strong></td><td><strong>64</strong> 条 HFMA2 = <strong>128</strong> FP16 FLOP/cycle/SM（与 FP32 相同）</td></tr><tr><td><strong>FP64</strong></td><td><strong>2</strong> ops/cycle/SM（正好 FP32 的 <strong>1/64</strong>）</td></tr><tr><td><strong>SFU</strong></td><td><strong>16</strong> ops/cycle/SM（每调度器 4）</td></tr><tr><td><strong>延迟</strong></td><td>算术指令 <strong>4</strong> 周期；MUFU <strong>17</strong>；MMA <strong>≈40</strong>；FP64 <strong>48</strong></td></tr><tr><td><strong>存储</strong></td><td>L1 <strong>37</strong> 周期、L2 <strong>240–249</strong>、DRAM <strong>679–750</strong>；可用 L2 仅 <strong>8–12 MiB</strong></td></tr><tr><td><strong>带宽</strong></td><td>读 <strong>250 GB/s</strong>、写 <strong>245 GB/s</strong>（标称 272 的 92%/90%）；<strong>sector = 32 B</strong></td></tr><tr><td><strong>共享内存</strong></td><td><strong>32 bank × 4 B</strong>，LDS 延迟 <strong>24</strong> 周期，LDS 发射率 <strong>每 2 周期 1 条</strong></td></tr><tr><td><strong>指令缓存（L1I）</strong></td><td>容量 <strong>约 60 KiB</strong>（57 点细扫，平区止于 58.4–59.8 KiB）；容量内 1.01–1.13 cycles/指令</td></tr><tr><td><strong>取指预取</strong></td><td>只预取<strong>相邻 1 行</strong>（+1 行 181 周期 ≈ 命中，+3 行 272 ≈ 失效）</td></tr><tr><td><strong>Tensor</strong></td><td>FP16 <strong>514</strong> / TF32 <strong>257</strong> / FP8 <strong>1025</strong> / INT8 <strong>2047</strong> / INT4 <strong>4095</strong> FLOP/cycle/SM</td></tr><tr><td><strong>全卡</strong></td><td><strong>24 个 SM</strong>（直接测出）；FP32 实测 <strong>15.1 TFLOPS</strong>（理想 16.86 的 89%）</td></tr></tbody></table></div>
 <p>三条最值得记住的：</p>
 <ol><li><strong>「FP32 峰值 128」有前提</strong>——需要操作数复用。三源互不相同且相邻指令也无法复用时，吞吐掉到 78（1.60× 代价），因为寄存器堆每 lane 每周期只供得起约 2 次读。</li><li><strong>「24 MiB L2」拿不到手</strong>——规格 24 MiB，但容量拐点落在 8–16 MiB 之间，一个计算负载实际能指望的只有 <strong>8–12 MiB</strong>（桌面合成长期占着另一半）。</li><li><strong>INT8 是 FP8 的两倍</strong>——同一个 <code>m16n8k32</code> 形状、同样 8 位操作数，INT8 的发射率 0.2499、FP8 只有 0.1248。FP8 路径跑在半速上，原因未查明。</li></ol>
 <h2>1. 怎么测的</h2>
@@ -693,7 +693,70 @@ L2 = 24 MiB     AD107 的 L2
 <p><strong>L1I 容量 ≈ 64–80 KiB</strong>。容量以内指令供给几乎零开销（1.012 vs 理论下限 1.00），越界后掉到 2.4 cycles/指令（效率 44%）。</p>
 <p>右图是分区归属的证据：warp0 与 warp1（不同调度器）无论跑同代码还是不同代码，每指令周期<strong>完全不变</strong>；warp0 与 warp4（同一调度器）变成 2.03–2.16——但那是两个 warp 抢一条发射槽的必然结果（下限 2.0），因为&quot;同代码&quot;与&quot;不同代码&quot;在这些尺寸下几乎没差别 ⟹ <strong>没有观测到 L0I 容量限制</strong>。</p>
 <p>这条数据还解释了一件事：本工程其它所有延迟/吞吐内核都是 ≤16 KiB 的直线代码，完整装在 L1I 里，所以那些数字不含取指开销。</p>
-<p><strong>容量复核（Round 13）</strong>：自建步进引擎（谓词跳转梯派发）用<strong>稳态差值法</strong>独立测了一次——压力 53.8 KiB 时碰探针行仍只要 146 周期，<strong>64.5 KiB 时跳到 450</strong>。两条独立路径都指向&quot;L1I 约 54–64 KiB&quot;。</p>
+<p><strong>容量细扫（Round 13）</strong>：自建步进引擎做了一次 <strong>57 个足迹点</strong>的细扫（每点 1424 B，统一块尺寸，测循环稳态的每步周期）：</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" data-w="1000" data-h="470" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">
+<rect width="1000" height="470" fill="#ffffff"/>
+<text x="36.0" y="38.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="19" fill="#111827" text-anchor="start" font-weight="600" opacity="1">图 13  指令缓存容量细扫：每步代价随足迹的拐点</text>
+<text x="36.0" y="60.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="start" font-weight="400" opacity="1">统一尺寸的填充块（1424 B）× 57 个足迹点；纵轴是循环稳态的每步周期</text>
+<rect x="96.0" y="98.0" width="834.0" height="274.0" rx="0" fill="#ffffff" stroke="none" stroke-width="1" opacity="1"/>
+<text x="96.0" y="390.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">0K</text>
+<text x="251.3" y="390.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">16K</text>
+<text x="406.6" y="390.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">32K</text>
+<text x="561.8" y="390.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">48K</text>
+<text x="717.1" y="390.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">64K</text>
+<text x="872.4" y="390.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">80K</text>
+<text x="513.0" y="414.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" font-weight="400" opacity="1">足迹（字节）</text>
+<text x="44" y="235.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle" transform="rotate(-90 44 235.0)">每步周期</text>
+<line x1="96.0" y1="363.8" x2="930.0" y2="363.8" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="367.8" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">600</text>
+<line x1="96.0" y1="304.7" x2="930.0" y2="304.7" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="308.7" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">620</text>
+<line x1="96.0" y1="245.6" x2="930.0" y2="245.6" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="249.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">640</text>
+<line x1="96.0" y1="186.6" x2="930.0" y2="186.6" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="190.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">660</text>
+<line x1="96.0" y1="127.5" x2="930.0" y2="127.5" stroke="#e5e7eb" stroke-width="1" opacity="1"/>
+<text x="86.0" y="131.5" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">680</text>
+<line x1="96.0" y1="336.6" x2="930.0" y2="336.6" stroke="#2563eb" stroke-width="1.2" opacity="1" stroke-dasharray="5 4"/>
+<text x="102.0" y="328.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#2563eb" text-anchor="start" font-weight="400" opacity="1">平区基线 609 周期</text>
+<line x1="816.3" y1="172.7" x2="930.0" y2="172.7" stroke="#dc2626" stroke-width="1.2" opacity="1" stroke-dasharray="5 4"/>
+<text x="926.0" y="164.7" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#dc2626" text-anchor="end" font-weight="400" opacity="1">平台 665（+9%）</text>
+<rect x="649.5" y="98.0" width="53.1" height="274.0" rx="0" fill="#fef2f2" stroke="none" stroke-width="1" opacity="1"/>
+<text x="676.0" y="412.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="11.5" fill="#dc2626" text-anchor="middle" font-weight="600" opacity="1">拐点 58.4–64 KiB</text>
+<polyline points="150.0,297.6 163.5,316.1 177.0,306.6 190.5,311.9 204.0,305.0 217.5,319.9 231.0,327.5 244.5,313.9 257.9,323.1 271.4,307.8 284.9,320.4 298.4,320.4 311.9,313.6 325.4,321.4 338.9,317.6 352.4,323.5 365.9,327.4 379.4,322.4 392.9,326.9 406.4,320.3 419.9,327.8 433.4,328.7 446.9,324.3 460.4,328.9 473.9,330.2 487.4,330.0 500.9,334.8 514.4,335.6 527.9,334.9 541.4,336.6 554.9,336.4 568.3,333.1 581.8,330.2 595.3,330.2 608.8,328.2 622.3,322.2 635.8,324.2 649.3,310.6 662.8,315.8 676.3,296.2 689.8,299.6 703.3,294.5 716.8,278.7 730.3,277.4 743.8,251.3 757.3,244.7 770.8,238.5 784.3,224.9 797.8,222.7 811.3,191.3 824.8,190.0 838.3,179.3 851.8,173.5 865.3,175.4 878.7,172.7 892.2,177.4 905.7,180.3" fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linejoin="round"/>
+<circle cx="150.0" cy="297.6" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="177.0" cy="306.6" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="204.0" cy="305.0" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="231.0" cy="327.5" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="257.9" cy="323.1" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="284.9" cy="320.4" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="311.9" cy="313.6" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="338.9" cy="317.6" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="365.9" cy="327.4" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="392.9" cy="326.9" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="419.9" cy="327.8" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="446.9" cy="324.3" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="473.9" cy="330.2" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="500.9" cy="334.8" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="527.9" cy="334.9" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="554.9" cy="336.4" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="581.8" cy="330.2" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="608.8" cy="328.2" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="635.8" cy="324.2" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="662.8" cy="315.8" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="689.8" cy="299.6" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="716.8" cy="278.7" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="743.8" cy="251.3" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="770.8" cy="238.5" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="797.8" cy="222.7" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="824.8" cy="190.0" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="851.8" cy="173.5" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="878.7" cy="172.7" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<circle cx="905.7" cy="180.3" r="3.0" fill="#ffffff" stroke="#2563eb" stroke-width="1.6"/>
+<text x="976.0" y="456.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="10.5" fill="#6b7280" text-anchor="end" font-weight="400" opacity="1">来源：Round 13b（results/20261118-*，数据 docs/figures/data/cap_curve.json）</text>
+</svg><figcaption>图 13 指令缓存容量细扫</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>足迹</th><th>5.7–58.4 KiB</th><th>64 KiB</th><th>70 KiB</th><th>76 KiB 以上</th></tr></thead><tbody><tr><td>每步周期</td><td>611–622（<strong>平</strong>）</td><td>629（+3%）</td><td>640（+5%）</td><td><strong>665（+9%，平台）</strong></td></tr></tbody></table></div>
+<p>所以 <strong>可用容量约 60 KiB</strong>，越过之后只多花 9%——因为块内顺序执行，<strong>相邻行预取</strong>把后 10 行顺带取了，每块只多付一条 line 的取指（约 56 周期，正是 L2 命中代码的量级）。</p>
 <p><strong>取指预取（Round 13）</strong>：让一行必失效后再探邻居——<strong>+1 行 181 周期（≈命中 165）</strong>、+2 行 254、+3 行 272、+7 行 348（≈失效 344）。所以存在一个&quot;下一行&quot;预取器，<strong>深度 1 行（128 B）</strong>。这也解释了为什么过容量后是2.2× 台阶而不是干脆掉到 DRAM 级：顺序执行时下一行总在被预取。</p>
 <h2>6. Tensor Core</h2>
 <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 470" data-w="940" data-h="470" font-family="Segoe UI, Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">

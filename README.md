@@ -79,7 +79,7 @@ scripts/            免管理员工具链准备与运行包装
 docs/
   FINAL-REPORT.md   ★ 发布版报告（源）
   final-report.html ★ 发布版报告（自包含 HTML，SVG 内联）
-  figures/          12 张 SVG（由 make_figures.py 代码生成）
+  figures/          13 张 SVG（由 make_figures.py 代码生成；data/ 放曲线原始数据）
   make_html.py      MD -> 自包含 HTML
   00-methodology.md 测量方法论与踩坑记录
   01-device-facts.md Round 0 实测数据
@@ -166,7 +166,7 @@ Invoke-WebRequest -Uri "https://pypi.tuna.tsinghua.edu.cn/packages/52/de/823919b
 | Round 10 | 桌面干扰量化（同测量 3.4×）、多 SM 取最小降噪法（消除 2–8 MiB 伪台阶） | ✅ 完成 |
 | Round 11 | L2 容量拐点（夹在 8–16 MiB，可用容量约 8–12 MiB） | ✅ 完成 |
 | Round 12 | L1I 容量（64–80 KiB）、L0I 分区争用（移植外部 icache 包） | ✅ 完成 |
-| Round 13 | 指令缓存容量复核（54–64 KiB）、取指预取深度（1 行）、替换策略（未测出） | ✅ 完成 |
+| Round 13 | 指令缓存容量细扫（约 60 KiB，57 点）、取指预取深度（1 行）、替换策略（未测出） | ✅ 完成 |
 
 主结论见 [docs/02-sm-microarch.md](docs/02-sm-microarch.md)，
 存储层次见 [docs/04-memory-hierarchy.md](docs/04-memory-hierarchy.md)。

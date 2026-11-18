@@ -33,6 +33,7 @@ ROUNDS = {
     "11": ("probes.round11_l2_capacity", "L2 容量拐点"),
     "12": ("probes.round12_icache", "L1I 容量 / L0I 分区争用（移植 b300_pkg）"),
     "13": ("probes.round13_icache_struct", "指令缓存分级容量 / 预取 / 替换"),
+    "14": ("probes.round14_capacity_fine", "L1I 容量细扫（57 点，二分派发）"),
 }
 
 

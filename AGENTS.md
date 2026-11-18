@@ -21,7 +21,7 @@
 ```powershell
 cd E:\2026\4060-sm-microarch
 .\.venv\Scripts\python.exe smoke.py         # 链路自检
-.\.venv\Scripts\python.exe run_all.py       # 全部轮次（0–12，约 14 分钟）
+.\.venv\Scripts\python.exe run_all.py       # 全部轮次（0–13，约 16 分钟）
 .\.venv\Scripts\python.exe run_all.py --round 1 2
 .\.venv\Scripts\python.exe run_all.py --round 3 --tag mem
 ```
@@ -83,8 +83,10 @@ Round 3 会分配 64 MiB + 512 MiB + 256 MiB 三块显存，跑之前确认卡�
   所以给不出精确值；且无法区分"桌面占用 / L2 分区 / 流式替换"三种原因。
 - **桌面干扰已量化**：同一测量 3 秒内差 **3.4×**。任何单点延迟都必须取 min；
   本机无法独占（i5-13490F 无核显，4060 同时驱动两块屏），除非加一张亮机卡。
-- **L1I**：只测出容量 **64–80 KiB**（Round 12）。指令缓存延迟、取指带宽、
-  行大小/组相联、替换策略都没测；**L0I 是否存在**也只给了下界（2×16 KiB 内无限制）。
+- **L1I**：容量 **54–64 KiB**（Round 12/13 两法一致），**预取深度 1 行**（Round 13）。
+  **替换策略与 set 索引位未测出**：包里的 `seq` 族依赖 `brx.idx`（994 个内联目标），
+  在 sm_89 + nvrtc 上必崩（`seq_len=0` 也崩，id 未越界、结构体布局已核对）。
+  指令缓存延迟、取指带宽也未测；**L0I / L1.5 未分离**（只给了下界：2×16 KiB 内无限制）。
 - **L1D 精确容量**只给了 32–64 KiB 区间。
 - **共享内存 bank 带宽 32 字/周期是反推的**（无冲突时只到 16，那是 LSU 的 0.5 条/周期接受率）。
 - **warp→调度器的定量映射**未拿到：≤8 warp 时启动同步（≤13 周期）已证明双峰来自

@@ -72,6 +72,7 @@ probes/             各轮探针，每个模块暴露 run(log, reps) -> dict
   round10_noise_multism.py 干扰量化与多 SM 降噪
   round11_l2_capacity.py L2 容量拐点
   round12_icache.py L1I 容量 / L0I 分区争用
+  round13_icache_struct.py 自建步进引擎：容量 / 预取 / 替换
 scripts/            免管理员工具链准备与运行包装
   bootstrap.ps1     下 nvrtc/cuobjdump/nvdisasm 并自检
   run_all.ps1       跑测量（顺带设好控制台编码）
@@ -93,6 +94,7 @@ docs/
   10-noise-and-multism.md 桌面干扰量化与多 SM 降噪法
   11-l2-capacity.md L2 容量拐点
   12-l1i.md        L1I / L0I（移植 icache_b300_pkg）
+  13-icache-structure.md 指令缓存容量 / 预取 / 替换（自建引擎）
 notes/
   inference-log.md  逐条结论的证据链（测量 / SASS / 反证 / 置信度）
 results/            11 份原始数据快照：文档引用过的 8 份 + 最新全量 + round11/12
@@ -164,6 +166,7 @@ Invoke-WebRequest -Uri "https://pypi.tuna.tsinghua.edu.cn/packages/52/de/823919b
 | Round 10 | 桌面干扰量化（同测量 3.4×）、多 SM 取最小降噪法（消除 2–8 MiB 伪台阶） | ✅ 完成 |
 | Round 11 | L2 容量拐点（夹在 8–16 MiB，可用容量约 8–12 MiB） | ✅ 完成 |
 | Round 12 | L1I 容量（64–80 KiB）、L0I 分区争用（移植外部 icache 包） | ✅ 完成 |
+| Round 13 | 指令缓存容量复核（54–64 KiB）、取指预取深度（1 行）、替换策略（未测出） | ✅ 完成 |
 
 主结论见 [docs/02-sm-microarch.md](docs/02-sm-microarch.md)，
 存储层次见 [docs/04-memory-hierarchy.md](docs/04-memory-hierarchy.md)。

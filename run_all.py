@@ -36,6 +36,7 @@ ROUNDS = {
     "14": ("probes.round14_capacity_fine", "L1I 容量细扫（57 点，二分派发）"),
     "15": ("probes.round15_assoc_l0", "相联度 / set 跨度 / 干扰量化"),
     "16": ("probes.round16_multiwarp_l0", "L0 / L1.5 分区归属（多 warp）"),
+    "17": ("probes.round17_assoc_pad", "相联度 / set 跨度（填充解耦）"),
 }
 
 

@@ -21,7 +21,7 @@
 ```powershell
 cd E:\2026\4060-sm-microarch
 .\.venv\Scripts\python.exe smoke.py         # 链路自检
-.\.venv\Scripts\python.exe run_all.py       # 全部轮次（0–16，约 24 分钟）
+.\.venv\Scripts\python.exe run_all.py       # 全部轮次（0–17，约 28 分钟）
 .\.venv\Scripts\python.exe run_all.py --round 1 2
 .\.venv\Scripts\python.exe run_all.py --round 3 --tag mem
 ```
@@ -86,8 +86,11 @@ Round 3 会分配 64 MiB + 512 MiB + 256 MiB 三块显存，跑之前确认卡�
 - **L1I**（Round 12–16）：容量约 **64 KiB**；**SM 级共享**（4 分区共用，127.5 KiB 起才变慢）；
   **无独立每分区 L0I**（同分区 4 warp 合计 127.5 KiB 只 +1.5%，且不随足迹增长）；
   **无 L1.5 迹象**（单 warp 细扫在 5.7–58.4 KiB 完全平）；**预取深度 1 行**。
-  仍未测出：**相联度、set 跨度、替换策略、取指带宽**。Round 15 的冲突实验被两个混淆项污染
-  （块体长度被迫正比于间距；二分派发路径随 N 变化），修法是「CFG 可达但不执行的填充」，未做。
+  仍未测出：**相联度、set 跨度、替换策略、取指带宽**。三种设计都失败：
+  (1) 线性派发梯把派发开销混进足迹；(2) 等距块让块体长度被迫正比于间距；
+  (3) 「CFG 可达但不执行」的填充——补上累加器存出后间距仍恒为 112 B，
+     说明 ptxas 或删或搬，**nvrtc 链路没有可控的代码地址旋钮**。
+  要测相联度得换手段（改 cubin 字节或另找布局旋钮），不是调参数能解决的。
 - **L1D 精确容量**只给了 32–64 KiB 区间。
 - **共享内存 bank 带宽 32 字/周期是反推的**（无冲突时只到 16，那是 LSU 的 0.5 条/周期接受率）。
 - **warp→调度器的定量映射**未拿到：≤8 warp 时启动同步（≤13 周期）已证明双峰来自
